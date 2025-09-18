@@ -2,3 +2,4 @@ venv/
 .pyo
 .pyc
 .env
+test.py
