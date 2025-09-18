@@ -16,8 +16,8 @@ def init():
     global Queries, QUERIES
     QUERIES = load_queries()
     Queries = get_queries(QUERIES)
-    print(QUERIES)
-    print(Queries)
+    # print(QUERIES)
+    # print(Queries)
 
 def load_queries():
     with open('data/queries.json', 'r') as file:
