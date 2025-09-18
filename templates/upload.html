@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CampusCloud — Upload</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/upload_file.css') }}" />
+</head>
+<body>
+  <h1>Upload file to CampusCloud (InfiniCLOUD)</h1>
+  <div class="card">
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label for="file">Choose file</label>
+      <input id="file" name="file" type="file" required />
+
+      <label for="path">Select subject/folder</label>
+      <select id="path" name="path" required>
+        <option value="/ITOS">ITOS</option>
+        <option value="/AFDOC">AFDOC</option>
+        <option value="/Mathematics">Mathematics</option>
+        <option value="/EVS">EVS</option>
+        <option value="/MsOffice">MsOffice</option>
+      </select>
+
+      <div class="row">
+        <button id="submitBtn" type="submit">Upload</button>
+        <button id="clearBtn" type="button" onclick="clearLog()">Clear</button>
+      </div>
+
+      <progress id="progressBar" value="0" max="100" style="display:none"></progress>
+      <div class="hint">Upload will show a popup message when done.</div>
+    </form>
+
+    <h3 id="server-resp"  style="display:none">Server response (debug)</h3>
+    <pre id="output" style="display:none; color:#dc2626">No response yet.</pre>
+  </div>
+
+<script src="{{ url_for('static', filename='js/upload_file.js') }}"></script>
+</body>
+</html>
