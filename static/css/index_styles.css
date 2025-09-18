@@ -1,0 +1,15 @@
+body {
+    background-color: azure;
+}
+
+h1 {
+    font-weight: bold;
+    color: darkblue;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}
+
+h1:hover {
+    cursor: pointer;
+    text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.3);
+}
