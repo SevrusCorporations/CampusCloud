@@ -5,8 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CampusCloud — Upload</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/upload_file.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav_styles.css') }}" />
 </head>
 <body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <h2 class="logo">CampusCloud</h2>
+    </div>
+    <div class="nav-right">
+      <a href="/dashboard">Dashboard</a>
+      <a href="/upload_file">Upload</a>
+      <button id="logoutBtn" class="nav-logout">Logout</button>
+    </div>
+  </nav>
   <h1>Upload file to CampusCloud (InfiniCLOUD)</h1>
   <div class="card">
     <form id="uploadForm" enctype="multipart/form-data">

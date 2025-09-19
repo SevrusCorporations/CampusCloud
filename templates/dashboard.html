@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav_styles.css') }}" />
+</head>
+<body>
+  <!-- Navigation Panel -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <h2 class="logo">CampusCloud</h2>
+    </div>
+    <div class="nav-right">
+      <a href="/dashboard">Dashboard</a>
+      <a href="/upload_file">Upload</a>
+      <button id="logoutBtn" class="nav-logout">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Dashboard Content -->
+  <div class="dashboard-container">
+    <h1>Welcome to the Dashboard</h1>
+    <p>You are logged in!</p>
+
+    <div class="user-data">
+      <h2>Your Info</h2>
+      <div id="userData">
+        <p>Loading...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
